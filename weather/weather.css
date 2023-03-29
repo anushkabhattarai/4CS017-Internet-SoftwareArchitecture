@@ -3,7 +3,7 @@ h2{
     color: aliceblue;
 }
 body{
-    background: url(Untitled\ design\ \(2\).png);
+    background: url(background.png);
     background-size: cover;    /* sets the image to cover the entire backroud */
     font-family: sans-serif;
     text-transform: capitalize; /*capitalizes the text */
@@ -28,7 +28,7 @@ body{
     padding: 5px 10px;
     font-size: 18px;
     border-radius: 40px;
-    border: #ffffff;
+    border: #faf9f9;
 }
 .Weather{
     text-align: center;
