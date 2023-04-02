@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Information</title>
+</head>
+<body>
+  <h1>Movie Information</h1>
+  <form>
+    <label for="movie-title">Enter a movie title:</label>
+    <input type="text" id="movie-title" name="movie-title">
+    <button type="submit" id="search-btn">Search</button>
+  </form>
+  <div id="movie-info"></div>
+
+  <script>
+    const movieInfo = document.querySelector("#movie-info");
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      try {
+        const apiKey = "b4cdfba7";
+        const title = document.querySelector("#movie-title").value;
+        const apiUrl = `https://www.omdbapi.com/?t=${title}&apikey=${apiKey}`;
+
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        const titleEl = document.createElement("h2");
+        titleEl.textContent = data.Title;
+        movieInfo.appendChild(titleEl);
+
+        const posterEl = document.createElement("img");
+        posterEl.src = data.Poster;
+        posterEl.alt = `${data.Title} poster`;
+        movieInfo.appendChild(posterEl);
+
+        const plotEl = document.createElement("p");
+        plotEl.textContent = data.Plot;
+        movieInfo.appendChild(plotEl);
+
+        const ratingEl = document.createElement("p");
+        ratingEl.textContent = `IMDb Rating: ${data.imdbRating}`;
+        movieInfo.appendChild(ratingEl);
+
+        const runtimeEl = document.createElement("p");
+        runtimeEl.textContent = `Runtime: ${data.Runtime}`;
+        movieInfo.appendChild(runtimeEl);
+      } catch (error) {
+        movieInfo.textContent = error.message;
+      }
+    });
+  </script>
+</body>
+</html>
