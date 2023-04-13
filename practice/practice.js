@@ -59,13 +59,41 @@
 // else{
 //     console.log("the persona ge is not between 10 and 20")
 // };
-
-let a= prompt ("enter you age:");
-switch(a){
-    case 1:
-        console.log(you a is `${a}`);
-        break;
-    default:
-        console.log( your a is not `${a}`) ;   
+// let a= prompt("enter the age");
+// if (a>10 &&  a<=20){
+//      console.log("the age lies between 10 and 20");
+// }
+// else{
+//     console.log("the age doesn't lies between 10 and 20");
+// }
+//while loops
+// let n=prompt("enter the value of n")
+// let i=0;
+// while(i<n){35
+//     console.log(n);
+//     i++;
+// }
+//functions in javascripts
+const hello=()=>{
+    console.log("hello hi")
+   
 }
+function averageOfSum(x, y) {
+    console.log("Done");
+    return (x + y) / 2;
+}
+ const sum=(p,q)=>{
+    return p+q;
+ }
+let a=1;
+let b=2;
+let c=3;
+hello();
+
+console.log("average of a+b is", averageOfSum(a, b));  
+console.log("average of b+c is", averageOfSum(b, c)); 
+console.log("average of a+c is", averageOfSum(a, c));
+console.log(sum(5,6))
+
+
 
