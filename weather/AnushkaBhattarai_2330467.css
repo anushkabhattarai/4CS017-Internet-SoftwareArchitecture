@@ -1,64 +1,69 @@
-h1{
-    color: white;
-}
-body{
-    background: url(background.png);
+body {
+    background:url(background.png);
     background-size: cover;    /* sets the image to cover the entire backroud */
     font-family: sans-serif;
-    text-transform: capitalize; /*capitalizes the text */
+    text-transform: capitalize;
 }
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
-.header h1{
-    font-family: sans-serif;
-    color: rgb(220, 239, 255);
+h1,h2 {
+    font-size: 36px;
+    color: rgb(255, 255, 255);
 }
-#input{
-    font-size: 20px;
-    padding: 5px 10px;
-    background: rgb(252, 253, 254);
-    border-radius: 30px; /*rounding its corner*/
-    align-items: center;
-    margin-right: 10px;
-}
-#search{
-    background: cadetblue;
-    padding: 5px 10px;
-    font-size: 18px;
-    border-radius: 40px;
-    border: #faf9f9;
-    text-align: center;
-}
-
 .search-container {
     display: flex;
     justify-content: flex-end;
     padding: auto;
     margin-top: auto;
 }
-.weather{
+#input {
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    margin-right: 10px;
+} 
+#search {
+    background-color: #4caf50;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: none;
     text-align: center;
-    color: aliceblue;
+    cursor: pointer;
 }
-#city{
-    font-size: 30px;
+#previous-days-btn {
+    background-color: #2196f3;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: none;
     text-align: center;
+    cursor: pointer;
+    margin-left: 10px;
+} 
+.weather {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
 }
-.temprature-box{
+#city {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.temperature-box {
     display: flex;
     align-items: center;
-    justify-content: center; /*putting the content in middle*/
-    margin: 30px 0px;
-}
-#temperature{
-    align-items:center;
-    font-size: 50px;
-    margin: 20px;
-    margin-right: 10px;
-    color: wheat;
+    justify-content: center;
+    margin-bottom: 50px;
 }
 #logo {
     width: 90px; 
@@ -66,53 +71,24 @@ body{
     border-radius: 35%; /* this will create a circular border */
     background: rgba(240, 248, 255, 0.408);
   }
-#clouds{
-    font-size: 20px;
-    background: rgba(89, 104, 190, 0.778);
-    padding: 10px 20px;
-    border-radius: 40px;
+#temperature {
+    font-size: 50px;
+    margin-right: 10px;
+    color: white;
 }
 .forecast {
-    margin: 50px 0px;
+    margin-top: 50px;
     text-align: center;
-    
 }
-  
 .forecast-header {
     font-size: 24px;
     margin-bottom: 20px;
     color: white;
-  }
-  
+}
 .templist {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-  }
+}
   
-.next {
-    background: rgba(255, 255, 255, 0.7);
-    width: 150px;
-    margin: 20px;
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 3px 3px 10px rgba(75, 74, 74, 0.2);
-    text-align: center;
-  }
   
-.next p {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  
-.next .time {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: rgba(0, 0, 0, 0.5);
-  }
-  
-.next .desc {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-  }

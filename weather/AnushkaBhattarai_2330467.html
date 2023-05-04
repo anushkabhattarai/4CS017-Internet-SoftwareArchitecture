@@ -13,6 +13,7 @@
       <div class="search-container">
         <input type="text" name="" id="input" placeholder="Enter City Name" />
         <button id="search" onclick="searchByCity()">Search</button>
+        <button id="previous-days-btn" onclick="getPreviousDaysWeather()">Previous 6 days</button>
       </div>
     </header>
     <main>
@@ -26,64 +27,12 @@
       </div>
       <div class="forecast">
         <p class="forecast-header">Upcoming forecast</p>
-        <div class="templist">
-          <div class="next">
-            <div>
-              <p class="time">6.45 PM</p>
-              <p>33 &#8451;</p>
-            </div>
-            <p class="weatherr">Sunny</p>
-          </div>
-          <div class="next">
-            <div>
-              <p class="time">6.45 PM <br> Sunday</p>
-              <p>29 &#8451;</p>
-            </div>
-            <p class="weatherr">Light Rain</p>
-          </div>
-          <div class="next">
-            <div>
-              <p class="time">6.45 PM <br> Monday </p>
-              <p>15 &#8451;</p>
-            </div>
-            <p class="weatherr">Heavy Rain</p>
-          </div>
-          <div class="next">
-            <div>
-              <p class="time">6.45 PM <br> Tuesday</p>
-              <p>19 &#8451;</p>
-            </div>
-            <p class="weatherr">Storm</p>
-          </div>
-          <div class="next">
-            <div>
-              <p class="time">6.45 PM <br> Wednesday</p>
-              <p>32 &#8451;</p>
-            </div>
-            <p class="desc">Sunny</p>
-          </div>
-          <div class="next">
-            <div>
-              <p class="time">6.45 PM <br> Thrusday</p>
-              <p>10 &#8451;</p>
-            </div>
-            <p class="desc">Cold</p>
-        </div>
-        <div class="next">
-          <div>
-            <p class="time">6.45 PM <br> Friday</p>
-            <p>15 &#8451;</p>
-          </div>
-          <p class="desc">Cold</p>
-       </div>
-      <div class="next">
-        <div>
-          <p class="time">6.45 PM <br> Saturday</p>
-          <p>32 &#8451;</p>
-        </div>
-        <p class="desc">Sunny</p>
+        <div class="templist" id="forecast-list"></div>
+        <h3 id="humidity"></h3>
+        <h3 id="pressure"></h3>
+        <h3 id="wind_speed"></h3>
+        <h3 id="wind_direction"></h3>
       </div>
-    </div>
     </main>
     <script src="AnushkaBhattarai_2330467.js"></script>
   </body>
